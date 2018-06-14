@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/map_view_route"
+        android:layout_width="match_parent"
+        android:layout_height="380dp">
+
+    </com.baidu.mapapi.map.MapView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:id="@+id/qixing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="骑行路线（最佳路线）"
+            android:textColor="#8c8c8c"
+            android:textSize="12sp"
+            android:layout_marginTop="9dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentStart="true"
+            />
+
+        <Button
+            android:id="@+id/change_route"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:background="#00000000"
+            android:text="更换路线"
+            android:textColor="@color/blue"
+            android:textSize="12sp"
+            android:layout_toEndOf="@+id/qixing"
+            android:layout_marginLeft="220dp"
+            android:layout_marginTop="9dp"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/search_result_icon_reset"
+            android:layout_toRightOf="@+id/change_route"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="12dp"
+            />
+
+        <TextView
+            android:id="@+id/text_time_route"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="50"
+            android:textSize="20sp"
+            android:textColor="#fa8638"
+            android:layout_marginTop="16dp"
+            android:layout_below="@+id/qixing"
+            android:layout_marginLeft="10dp"
+            />
+
+        <TextView
+            android:id="@+id/text_long_route"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10"
+            android:textSize="20sp"
+            android:textColor="#fa8638"
+            android:layout_marginTop="16dp"
+            android:layout_below="@+id/qixing"
+            android:layout_toRightOf="@+id/text_time_route"
+            android:layout_marginLeft="47dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="分钟"
+            android:textSize="8sp"
+            android:textColor="#333333"
+            android:layout_below="@+id/text_long_route"
+            android:layout_alignStart="@+id/text_time_route"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="6dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="公里"
+            android:textSize="8sp"
+            android:textColor="#333333"
+            android:layout_alignStart="@+id/text_long_route"
+            android:layout_below="@+id/text_long_route"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="6dp"
+           />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="25dp"
+        android:background="@mipmap/btn_connect"
+        >
+        <TextView
+            android:id="@+id/btn_send_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="推送设备"
+            android:layout_centerInParent="true"
+            android:textColor="#ffffff"
+            android:textSize="18sp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/search_result_icon_push"
+            android:layout_toLeftOf="@+id/btn_send_result"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="15dp"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

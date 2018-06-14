@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.qingjiao.sharedbicycle.RideRecord"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/btn_return"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:text="骑行记录"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/record_bg_date"
+        android:text="•  3月"
+        android:textSize="11sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center"
+        />
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:background="@mipmap/record_bg_date">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2018年3月24日"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="10dp"
+            android:textSize="12sp"
+            android:textColor="#8c8c8c"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="270dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="50"
+                android:textColor="#333333"
+                android:textSize="15sp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="9dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#8c8c8c"
+                android:text="分钟"
+                android:textSize="10sp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="10dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:textColor="#333333"
+                android:textSize="15sp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="9dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#8c8c8c"
+                android:text="公里"
+                android:textSize="10sp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/record_icon_site"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="成都东软学院"
+            android:textColor="#333333"
+            android:textSize="14sp"
+            android:layout_marginTop="33dp"
+            android:layout_marginLeft="30dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="都江堰市第二人民医院"
+            android:textColor="#333333"
+            android:textSize="14sp"
+            android:layout_marginTop="68dp"
+            android:layout_marginLeft="30dp"/>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:background="@mipmap/record_bg_date">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2018年3月26日"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="10dp"
+            android:textSize="12sp"
+            android:textColor="#8c8c8c"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="270dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20"
+                android:textColor="#333333"
+                android:textSize="15sp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="9dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#8c8c8c"
+                android:text="分钟"
+                android:textSize="10sp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="10dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4"
+                android:textColor="#333333"
+                android:textSize="15sp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="9dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#8c8c8c"
+                android:text="公里"
+                android:textSize="10sp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/record_icon_site"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="如家快捷酒店（宣化门天乙街口）"
+            android:textColor="#333333"
+            android:textSize="14sp"
+            android:layout_marginTop="33dp"
+            android:layout_marginLeft="30dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="莎乐美音乐空间"
+            android:textColor="#333333"
+            android:textSize="14sp"
+            android:layout_marginTop="68dp"
+            android:layout_marginLeft="30dp"/>
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/record_bg_date"
+        android:text="•  4月"
+        android:textSize="11sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center"
+        />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:background="@mipmap/record_bg_date">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2018年4月3日"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="10dp"
+            android:textSize="12sp"
+            android:textColor="#8c8c8c"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="270dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="60"
+                android:textColor="#333333"
+                android:textSize="15sp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="9dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#8c8c8c"
+                android:text="分钟"
+                android:textSize="10sp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="10dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12"
+                android:textColor="#333333"
+                android:textSize="15sp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="9dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#8c8c8c"
+                android:text="公里"
+                android:textSize="10sp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/record_icon_site"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="茶店子快铁站"
+            android:textColor="#333333"
+            android:textSize="14sp"
+            android:layout_marginTop="33dp"
+            android:layout_marginLeft="30dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="成都东软学院"
+            android:textColor="#333333"
+            android:textSize="14sp"
+            android:layout_marginTop="68dp"
+            android:layout_marginLeft="30dp"/>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:background="@mipmap/record_bg_date">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2018年4月8日"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="10dp"
+            android:textSize="12sp"
+            android:textColor="#8c8c8c"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="270dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="60"
+                android:textColor="#333333"
+                android:textSize="15sp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="9dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#8c8c8c"
+                android:text="分钟"
+                android:textSize="10sp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="10dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12"
+                android:textColor="#333333"
+                android:textSize="15sp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="9dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#8c8c8c"
+                android:text="公里"
+                android:textSize="10sp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/record_icon_site"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="茶店子快铁站"
+            android:textColor="#333333"
+            android:textSize="14sp"
+            android:layout_marginTop="33dp"
+            android:layout_marginLeft="30dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="成都东软学院"
+            android:textColor="#333333"
+            android:textSize="14sp"
+            android:layout_marginTop="68dp"
+            android:layout_marginLeft="30dp"/>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/ride_record"
+            android:icon="@mipmap/sidebar_icon_ride"
+            android:checkable="true"
+            app:showAsAction="never"
+            android:title="    骑行记录"/>
+        <item
+            android:id="@+id/search_record"
+            android:icon="@mipmap/sidebar_icon_search"
+            app:showAsAction="never"
+            android:title="    搜索记录"/>
+        <item
+            android:id="@+id/place_collect"
+            android:icon="@mipmap/sidebar_icon_collect"
+            app:showAsAction="never"
+            android:title="    地点收藏"/>
+        <item
+            android:id="@+id/system_setting"
+            android:icon="@mipmap/sidebar_icon_system"
+            app:showAsAction="never"
+            android:title="    系统设置"/>
+    </group>
+
+</menu>

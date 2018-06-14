@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.qingjiao.sharedbicycle.NaviActivity"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="131dp"
+        android:background="@color/blue">
+
+        <ImageButton
+            android:id="@+id/btn_navi_return"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginBottom="40dp"
+            android:layout_marginEnd="388dp"
+            android:layout_marginTop="8dp"
+            android:background="@mipmap/btn_return"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.23" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/circle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.144"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editext_location"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="120dp"
+            android:layout_marginTop="8dp"
+            android:background="@null"
+            android:text="成都东软学院"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:maxLines="1"
+            android:drawableBottom="@drawable/edit_line"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.282" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/circle_yellow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.144"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.649" />
+
+        <EditText
+            android:id="@+id/AutoComplete_go"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@null"
+            android:text="青城山快铁站"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:maxLines="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.425"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.703" />
+
+        <Button
+            android:id="@+id/btn_find_find"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@mipmap/btn_find_equip"
+            android:text="搜索"
+            android:textColor="@color/blue"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.976"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/map_view_route"
+        android:layout_width="match_parent"
+        android:layout_height="332dp">
+
+    </com.baidu.mapapi.map.MapView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        >
+
+        <TextView
+            android:id="@+id/qixing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="骑行路线（最佳路线）"
+            android:textColor="#8c8c8c"
+            android:textSize="9sp"
+            android:layout_marginTop="9dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentStart="true"
+            />
+
+        <Button
+            android:id="@+id/change_route"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:background="#00000000"
+            android:text="更换路线"
+            android:textColor="@color/blue"
+            android:textSize="9sp"
+            android:layout_toEndOf="@+id/qixing"
+            android:layout_marginLeft="220dp"
+            android:layout_marginTop="9dp"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/search_result_icon_reset"
+            android:layout_toRightOf="@+id/change_route"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="12dp"
+            />
+
+        <TextView
+            android:id="@+id/text_time_route"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="50"
+            android:textSize="20sp"
+            android:textColor="#fa8638"
+            android:layout_marginTop="16dp"
+            android:layout_below="@+id/qixing"
+            android:layout_marginLeft="10dp"
+            />
+
+        <TextView
+            android:id="@+id/text_long_route"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10"
+            android:textSize="20sp"
+            android:textColor="#fa8638"
+            android:layout_marginTop="16dp"
+            android:layout_below="@+id/qixing"
+            android:layout_toRightOf="@+id/text_time_route"
+            android:layout_marginLeft="47dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="分钟"
+            android:textSize="8sp"
+            android:textColor="#333333"
+            android:layout_below="@+id/text_long_route"
+            android:layout_alignStart="@+id/text_time_route"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="5dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="公里"
+            android:textSize="8sp"
+            android:textColor="#333333"
+            android:layout_alignStart="@+id/text_long_route"
+            android:layout_below="@+id/text_long_route"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="5dp"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@mipmap/btn_connect"
+        >
+        <Button
+            android:id="@+id/btn_send_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="推送设备"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="9dp"
+            android:textColor="#ffffff"
+            android:background="#00000000"
+            android:textSize="18sp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/search_result_icon_push"
+            android:layout_toLeftOf="@+id/btn_send_result"
+            android:layout_marginTop="9dp"
+            android:layout_marginLeft="79dp"
+            />
+    </RelativeLayout>
+
+    <!--<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="40dp"
+        android:background="@mipmap/btn_connect"
+        >
+        <TextView
+            android:id="@+id/btn_send_equip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设备已连接，正在推送...."
+            android:layout_centerInParent="true"
+            android:textColor="#ffffff"
+            android:textSize="18sp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/search_result_icon_push"
+            android:layout_toLeftOf="@+id/btn_send_equip"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="15dp"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="25dp"
+        android:text="路径信息"/>
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="20dp"
+                android:background="@mipmap/path_select_icon_begin"
+                android:layout_marginLeft="50dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="起点（我的位置）"
+                android:layout_marginLeft="30dp"/>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#bebebe"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@mipmap/path_select_icon_left"
+                android:layout_marginLeft="50dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="前方80米左转，进入东软大道"
+                android:layout_marginLeft="20dp"
+                />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#bebebe"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@mipmap/path_select_icon_straight"
+                android:layout_marginLeft="50dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="前方直行100米"
+                android:layout_marginLeft="20dp"/>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#bebebe"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@mipmap/path_select_icon_right"
+                android:layout_marginLeft="50dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="前方60米右转"
+                android:layout_marginLeft="20dp"/>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#bebebe"/>
+
+
+    </LinearLayout>-->
+
+</LinearLayout>

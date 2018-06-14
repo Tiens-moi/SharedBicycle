@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <ImageButton
+                android:id="@+id/search_find_collect"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:background="@mipmap/search_btn_collect" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/search_find_collect"
+                android:layout_centerHorizontal="true"
+                android:text="收藏"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <ImageButton
+                android:id="@+id/search_find_home"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:background="@mipmap/search_btn_home" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/search_find_home"
+                android:layout_centerHorizontal="true"
+                android:text="家"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <ImageButton
+                android:id="@+id/search_find_company"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:background="@mipmap/search_btn_company" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/search_find_company"
+                android:layout_centerHorizontal="true"
+                android:text="公司"/>
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/line"/>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="— 历史记录 —"
+        android:textColor="#333333"
+        android:textSize="15sp"
+        android:gravity="center"
+        />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view_find"
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        >
+    </android.support.v7.widget.RecyclerView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="清除历史记录"
+            android:background="#00000000"
+            android:textColor="@color/blue"
+            android:textSize="13sp"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
+
+
+</LinearLayout>
